@@ -1,0 +1,2 @@
+# Get the list of the network interfaces of the machine without displaying any detail for these interfaces. Only the list of names.
+lo0 gif0 stf0 en0 en1 en2 en3 bridge0 p2p0 awdl0 utun0
