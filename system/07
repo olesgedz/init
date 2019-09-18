@@ -1,0 +1,5 @@
+# Figure out the PID of the SSHD service.
+cat /var/run/sshd.pid
+
+# PID is process ID
+# SSH is a Secure Shell Daemon application

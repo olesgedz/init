@@ -1,0 +1,7 @@
+# What file contains the RSA keys of systems that are authorized to connect via SSH?
+~/.ssh/authorized_keys
+# RSA is a private key used for authentication +  secure data transmission
+# the encription key is public and the decription key is kept secret (private)
+#ssh-keygen -t rsa
+# The known_hosts file lets the client authenticate the server, to check that it isn't connecting to an impersonator. 
+# The authorized_keys file lets the server authenticate the user.

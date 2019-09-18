@@ -1,0 +1,6 @@
+# Find the command that kills the background command’s process
+kill tail
+# kill %<job number>
+# kill <PID>
+# to know PID of process. jobs -l will help us
+# jobs — display status of jobs in the current session.

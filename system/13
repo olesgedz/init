@@ -1,0 +1,6 @@
+# Name the command that find currently running processes
+top
+#ps -aux
+#  a                   all with tty, except session leaders
+#  x                   processes without controlling ttys
+#  u                   user-oriented format

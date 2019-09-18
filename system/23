@@ -1,0 +1,10 @@
+# Explain how connect yourself as new user. (With graphic session and ssh session)
+# login to the system as a root user
+#su 
+# to change to a new user
+# su - 
+# adduser newuser
+# to check
+# whoami
+#on guest
+# ssh -p <port> <newuser>@<hostname>

@@ -1,0 +1,6 @@
+echo "Who you want to delete?"
+read usr
+pgrep -u $usr
+ps -fp $(pgrep -u $usr)
+sudo killall -KILL -u $usr
+sudo userdel -r $usr
