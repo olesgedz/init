@@ -1,11 +1,29 @@
 #!/bin/bash
-# https://devhints.io/bash
-echo "Total Arguments:" $#
-echo "All Arguments values:" $@
-if (( $# == 0 )); then
-   echo "No arguments"
+
+print_usage () {
+	echo "    --usage:
+		pull -- to update directory to origin.\n
+		fix -- to init and download submodules.\n";
+    exit 1;
+}
+
+if [ $# -eq 0 -o $# -gt 1  ]  ; then
+   print_usage;
 fi
+
 args=("$@")
-echo "First->"  ${args[0]} 
-echo "Second->" ${args[1]}
-echo "$args"
+
+if [ ${args[0]} == "pull" ]; then
+  git pull;
+  git submodule foreach --recursive git pull origin master;
+  git submodule foreach sync;
+fi
+
+if [ ${args[0]} == "fix" ]; then
+  git submodule update --init --recursive;
+  git submodule foreach sync;
+fi
+
+if [ ${args[0]} == "sync" ]; then
+  git submodule foreach sync;
+fi
